@@ -6,12 +6,14 @@ import lombok.Data;
 @Data
 public class ProvinceDto {
 	
+	private Long id;
 	private String code;
 	private String name;
 	
 	public static ProvinceDto entityToDto(Province province) {
 		
 		ProvinceDto provinceDto = new ProvinceDto();
+		provinceDto.setId(province.getId());
 		provinceDto.setCode(province.getCode());
 		provinceDto.setName(province.getName());
 		
